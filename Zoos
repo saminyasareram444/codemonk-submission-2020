@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+	string c;
+	cin>>c;
+	//cout<<c;
+	int n=c.length();
+	//cout<<n;
+	int z=0,o=0;
+	for(int i=0;i<n;i++)
+	{
+		if(c[i]=='z')	z++;
+		else if(c[i]=='o')	o++;
+	}
+	if(z*2==o)	cout<<"Yes";
+	else	cout<<"No";
+
+}

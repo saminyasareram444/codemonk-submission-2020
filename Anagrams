@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+	int n;
+	string c1,c2;
+	cin>>n;
+	int l1,l2,lsum;
+	while(n--)
+	{
+		cin>>c1;
+		cin>>c2;
+		l1=c1.length();
+		l2=c2.length();
+		lsum=0;
+		int cnt1[26]={0},cnt2[26]={0};
+		for(int i=0;i<l1;i++)	cnt1[c1[i]-'a']++;
+		for(int i=0;i<l2;i++)	cnt2[c2[i]-'a']++;
+		for(int i=0;i<26;i++)	lsum+=(abs(cnt1[i]-cnt2[i]));
+		cout<<lsum<<endl;
+	}
+
+}
